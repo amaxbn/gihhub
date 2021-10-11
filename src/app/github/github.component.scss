@@ -1,0 +1,131 @@
+$base: 8px;
+$white: #fff;
+$grey: #e6e6e6;
+$grey-dark: #9f9f9f;
+
+
+:host {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.error-active {
+  display: block;
+}
+
+.error-none {
+  display: none;
+}
+
+.loading {
+  //margin-top: $base * 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nodata {
+  justify-content: center;
+  width: 100%;
+  //margin-top: $base * 40;
+  font-size: $base * 5;
+  font-weight: bold;
+}
+
+.github {
+  background-color: #fff;
+  text-align: center;
+  height: 100%;
+  //width: 100%;
+
+
+
+  &-input {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .btn-active {
+    background-color: #d9d9d9;
+    width: 90%;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: $base / 2;
+    margin-bottom: $base;
+
+    &:hover {
+      background-color: #e6e6e6;
+      font-weight: bold;
+      transition: 1s;
+    }
+  }
+
+  .btn-none {
+    display: none;
+  }
+
+  input {
+    width: $base * 32;
+    border-color: #a3daf1;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &-info {
+    display: flex;
+    //justify-content: center;
+    //margin-left: $base * 10;
+    align-items: center;
+    flex-wrap: wrap;
+    //margin: 0 auto;
+    flex-direction: row;
+    background-color: #fff;
+
+
+    .hideBtn {
+      display: none;
+    }
+
+    &-pic {
+      img {
+        width: 200px;
+        height: 200px;
+        margin: $base * 8;
+        margin-bottom: $base * 10;
+        cursor: pointer;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        transition: .5s;
+      }
+
+      &-login {
+        cursor: pointer;
+
+        &:hover {
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.preload {
+  margin-top: $base * 2;
+
+  &-none {
+    display: none;
+  }
+}
+

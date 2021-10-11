@@ -1,0 +1,70 @@
+@import "../github/github.component";
+
+:host {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.nik {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d7f1f1;
+    transition: .5s;
+  }
+}
+
+.link {
+  position: absolute;
+  color: #e6e6e6;
+  margin-left: $base * 3;
+  font-size: $base * 3;
+
+  :hover {
+    color: #999999;
+    cursor: pointer;
+  }
+}
+.us {
+  background-color: #fff;
+  text-align: center;
+  height: 100%;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-w {
+  max-width: 30%;
+
+  &-p {
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d7f1f1;
+      transition: .5s;
+    }
+  }
+}
+.user-follow {
+  display: inline-flex;
+  padding: $base;
+}
+.login {
+
+  :hover {
+    color: blue;
+    cursor: pointer;
+  }
+}
+

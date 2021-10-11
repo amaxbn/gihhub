@@ -1,0 +1,61 @@
+<div class="github">
+
+  <h1>GitHub Users</h1>
+
+  <app-auto-input [formControl]="login" class="github-input"></app-auto-input>
+
+  <ng-container *ngIf="preloaderStart">
+    <div >
+      <app-preloader></app-preloader>
+    </div>
+  </ng-container>
+
+
+  <div class="github-info">
+
+    <ng-container *ngIf="gitUsers">
+
+      <div *ngIf="errors.length" class="nodata">
+        <div [className]="hideError ? 'error-active' : 'error-none'">Ошибка при получении данных:</div>
+      </div>
+
+      <div *ngIf="!errors.length && !gitUsers.items.length" class="nodata">
+        <div>Нет пользователей</div>
+      </div>
+
+      <div *ngFor="let item of gitUsers.items">
+
+        <div (click)="getUserByLogin(item.login)" class="github-info-pic">
+          <img src="{{item.avatar_url}}">
+          <div class="github-info-pic-login">
+            {{item.login}}
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+
+  </div>
+
+  <ng-container *ngIf="preloader">
+    <div >
+      <app-preloader></app-preloader>
+    </div>
+  </ng-container>
+
+  <div [className]="!preloader ? 'preload' : 'preload-none'">
+    <button (click)="onClick($event)"
+            [className]="hideBtn ? 'btn-active' : 'btn-none'"
+    >Показать еще
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

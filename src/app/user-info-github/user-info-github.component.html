@@ -1,0 +1,55 @@
+<div class="link">
+  <div (click)="gotoGithub()">X</div>
+</div>
+
+<div class="us">
+  <ng-container *ngIf="preloader">
+    <div class="loading">
+      <app-preloader></app-preloader>
+    </div>
+  </ng-container>
+<div *ngIf="gitLogin" class="user">
+  <div>
+    <img src="{{gitLogin.avatar_url}}">
+  </div>
+  <strong>Ник:</strong>
+  <div (click)="goUserGithub(gitLogin.login)" class="nik">
+    {{gitLogin.login}}
+  </div>
+  <strong>Имя:</strong>
+  <div *ngIf="gitLogin.name">
+    {{gitLogin.name}}
+  </div>
+  <strong>Краткое описание:</strong>
+  <div *ngIf="gitLogin.bio">
+    {{gitLogin.bio}}
+  </div>
+  <strong>Подписки:</strong>
+  <div class="user-w">
+    <div *ngFor="let item of gitFollow" class="user-follow">
+        <div>
+          {{item.login}}<span>,</span>
+        </div>
+    </div>
+  </div>
+
+  <strong>Подписчики:</strong>
+  <div class="user-w">
+    <div *ngFor="let item of gitFollowers" class="user-follow">
+        {{item.login}}<span>,</span>
+    </div>
+  </div>
+
+  <strong>Репозиторий:</strong>
+  <div class="user-w">
+    <div *ngFor="let item of gitRepos" class="user-follow">
+      <div (click)="goReposGithub(gitLogin.login, item.name)" class="user-w-p">
+        {{item.name}}<span>,</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+

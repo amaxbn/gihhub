@@ -1,0 +1,14 @@
+@import "../github/github.component";
+
+div {
+  max-width: 100%;
+}
+
+.input-status {
+  width: 90%;
+  height: $base * 3;
+  margin-top: $base * 2;
+  margin-bottom: $base * 2;
+  margin-left: $base;
+  outline: none;
+}

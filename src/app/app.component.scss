@@ -1,0 +1,26 @@
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: 8px;
+  overflow: hidden;
+
+  .main {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+  }
+}
+
